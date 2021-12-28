@@ -1,1 +1,11 @@
+.App {
+  font-family: "Raleway", sans-serif;
+}
 
+.App-header {
+  color: white;
+  font-size: 4vw;
+  text-align: center;
+  margin-top: 90px;
+  margin-bottom: 30px;
+}
