@@ -1,8 +1,13 @@
 import React, { useState } from "react";
+import axios from "axios";
 import "./SearchEngine.css";
 
 export default function SearchEngine() {
-  const [searchedWord, setSearchedWord] = useState(null);
+  const [searchedWord, setSearchedWord] = useState("");
+
+  function handleResponse(response) {
+    console.log(response.data[0]);
+  }
 
   function handleSearch(event) {
     setSearchedWord(event.target.value);
@@ -10,6 +15,8 @@ export default function SearchEngine() {
 
   function handleSubmit(event) {
     event.preventDefault();
+    let url = `https://api.dictionaryapi.dev/api/v2/entries/en/${searchedWord}`;
+    axios.get(url).then(handleResponse);
   }
   return (
     <div className="SearchEngine">
