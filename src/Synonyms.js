@@ -1,7 +1,6 @@
 import React from "react";
 
 export default function Synonyms(props) {
-  console.log(props.data);
   return (
     <div className="Synonyms">
       {props.data.map(function (synonym, index) {
