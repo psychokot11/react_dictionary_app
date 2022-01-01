@@ -16,7 +16,7 @@
   width: 100%;
   border-radius: 6px;
   border-width: 1px;
-  border-color: rgba(255, 255, 255, 0.315);
+  border-color: rgba(255, 255, 255, 0.144);
   background-color: rgba(255, 255, 255, 0);
 }
 
@@ -35,9 +35,39 @@
   margin-right: 7px;
 }
 
+.link {
+  color: white;
+  text-decoration: none;
+}
+
+.link:hover {
+  color: white;
+  text-decoration: none;
+}
+
 .phonetic {
   font-family: sans-serif;
   font-size: 20px;
+}
+
+.partOfSpeech {
+  font-weight: bolder;
+  font-size: 24px;
+}
+
+.definitions {
+  padding-bottom: 8px;
+}
+
+.example {
+  font-style: italic;
+  font-size: 14px;
+  margin: 15px 5px;
+}
+
+.synonyms {
+  padding: 5px 15px;
+  font-size: 14px;
 }
 
 @media (max-width: 576px) {
