@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import axios from "axios";
 import Word from "./Word";
 import "./SearchEngine.css";
-import { faTruckLoading } from "@fortawesome/free-solid-svg-icons";
 
 export default function SearchEngine() {
   const [searchedWord, setSearchedWord] = useState("moon");
