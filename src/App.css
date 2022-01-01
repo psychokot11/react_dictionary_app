@@ -9,3 +9,10 @@
   margin-top: 90px;
   margin-bottom: 30px;
 }
+
+footer {
+  color: white;
+  display: block;
+  margin: 0 auto 50px;
+  max-width: 55%;
+}

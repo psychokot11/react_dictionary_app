@@ -11,6 +11,17 @@ function App() {
         </header>
         <SearchEngine />
       </div>
+      <footer>
+        <a
+          href="https://github.com/psychokot11/react_dictionary_app"
+          className="link"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <b>Open-source</b>
+        </a>{" "}
+        code by Zosia S
+      </footer>
     </div>
   );
 }
