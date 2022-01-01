@@ -4,7 +4,6 @@ import { faVolumeUp } from "@fortawesome/free-solid-svg-icons";
 import Meanings from "./Meanings";
 
 export default function Word(props) {
-  console.log(props.data);
   if (props.data) {
     return (
       <div className="word">

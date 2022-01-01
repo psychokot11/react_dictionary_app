@@ -65,6 +65,15 @@
   margin: 15px 5px;
 }
 
+.Synonyms {
+  padding-right: 15px;
+  margin-bottom: 25px;
+}
+.heading {
+  font-size: 14px;
+  font-weight: normal;
+}
+
 .synonyms {
   padding: 5px 15px;
   font-size: 14px;
