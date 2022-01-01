@@ -23,7 +23,7 @@ export default function Word(props) {
           </span>
           <span className="phonetic">{props.data.phonetics[0].text}</span>
         </div>
-        <div className="background-container">
+        <div>
           {props.data.meanings.map(function (meaning, index) {
             return (
               <div key={index}>
