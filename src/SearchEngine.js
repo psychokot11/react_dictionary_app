@@ -8,7 +8,7 @@ export default function SearchEngine() {
   const [wordData, setWordData] = useState(null);
 
   function handleResponse(response) {
-    console.log(response.data[0].word);
+    console.log(response.data[0]);
     setWordData(response.data[0]);
   }
 
