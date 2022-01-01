@@ -18,7 +18,7 @@ function App() {
           target="_blank"
           rel="noreferrer"
         >
-          <b>Open-source</b>
+          <b>open-source</b>
         </a>{" "}
         code by Zosia S
       </footer>

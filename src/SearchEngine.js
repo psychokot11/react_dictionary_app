@@ -2,10 +2,22 @@ import React, { useState } from "react";
 import axios from "axios";
 import Word from "./Word";
 import "./SearchEngine.css";
+import { faTruckLoading } from "@fortawesome/free-solid-svg-icons";
 
 export default function SearchEngine() {
-  const [searchedWord, setSearchedWord] = useState("");
+  const [searchedWord, setSearchedWord] = useState("moon");
   const [wordData, setWordData] = useState(null);
+  const [ready, setReady] = useState(false);
+
+  function load() {
+    setReady(true);
+    search();
+  }
+
+  function search() {
+    let url = `https://api.dictionaryapi.dev/api/v2/entries/en/${searchedWord}`;
+    axios.get(url).then(handleResponse);
+  }
 
   function handleResponse(response) {
     console.log(response.data[0]);
@@ -18,25 +30,28 @@ export default function SearchEngine() {
 
   function handleSubmit(event) {
     event.preventDefault();
-    let url = `https://api.dictionaryapi.dev/api/v2/entries/en/${searchedWord}`;
-    axios.get(url).then(handleResponse);
+    search();
   }
 
-  return (
-    <div className="SearchEngine">
-      <div className="background-container">
-        <form className="form" onSubmit={handleSubmit}>
-          <input
-            type="search"
-            className="search-field"
-            onChange={handleSearch}
-          />
-        </form>
-        <div className="suggested-words">
-          suggested words: book, kitten, wine...
+  if (ready) {
+    return (
+      <div className="SearchEngine">
+        <div className="background-container">
+          <form className="form" onSubmit={handleSubmit}>
+            <input
+              type="search"
+              className="search-field"
+              onChange={handleSearch}
+            />
+          </form>
+          <div className="suggested-words">
+            suggested words: book, kitten, wine...
+          </div>
         </div>
+        <Word data={wordData} />
       </div>
-      <Word data={wordData} />
-    </div>
-  );
+    );
+  } else {
+    load();
+  }
 }
