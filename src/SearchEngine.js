@@ -5,14 +5,11 @@ import "./SearchEngine.css";
 
 export default function SearchEngine() {
   const [searchedWord, setSearchedWord] = useState("");
-  const [displayedWord, setDisplayedWord] = useState("moon");
   const [wordData, setWordData] = useState(null);
 
   function handleResponse(response) {
     console.log(response.data[0].word);
     setWordData(response.data[0]);
-    //console.log(wordData);
-    setDisplayedWord(searchedWord);
   }
 
   function handleSearch(event) {
