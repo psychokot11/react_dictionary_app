@@ -15,6 +15,7 @@ export default function Word(props) {
               href={props.data.phonetics[0].audio}
               className="link"
               target="_blank"
+              rel="noreferrer"
             >
               {" "}
               <FontAwesomeIcon icon={faVolumeUp} />{" "}
