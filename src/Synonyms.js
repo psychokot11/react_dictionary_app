@@ -4,7 +4,6 @@ export default function Synonyms(props) {
   return (
     <div className="Synonyms">
       {" "}
-      synonyms
       {/* {props.data.map(function (synonym, index) {
         if (index < 5) {
           return (
